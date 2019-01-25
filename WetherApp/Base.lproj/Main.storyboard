@@ -59,7 +59,7 @@
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="60" id="E25-0L-rht"/>
                                                 </constraints>
-                                                <fontDescription key="fontDescription" type="system" weight="medium" pointSize="15"/>
+                                                <fontDescription key="fontDescription" type="system" weight="medium" pointSize="20"/>
                                                 <state key="normal" title="Log in"/>
                                                 <connections>
                                                     <action selector="loginButtonAction" destination="BYZ-38-t0r" eventType="touchUpInside" id="W1J-6A-vx2"/>
