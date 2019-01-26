@@ -108,9 +108,19 @@ class LoginViewController: UIViewController {
         if self.demoLogin == loginText && self.demoPass == passText {
             print("Success")
         } else {
-            print("loginText or passText are invalid")
+            print("Wrong login or pass")
+            self.showErrorAlert()
         }
     }
+    
+    func showErrorAlert() {
+        let alertController = UIAlertController(title: "Error", message: "Wrong login or pass", preferredStyle: .alert)
+        let alertCancelAction = UIAlertAction(title: "Cancel", style: .cancel) { (action: UIAlertAction) in print("alertCancelAction")
+        }
+        alertController.addAction(alertCancelAction)
+        present(alertController, animated: true, completion: nil)
+    }
+    
     
     @IBAction func closeKeyboardAction(){
         print("closeKeyboardAction")
