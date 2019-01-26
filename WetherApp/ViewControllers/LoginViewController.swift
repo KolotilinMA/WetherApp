@@ -107,6 +107,7 @@ class LoginViewController: UIViewController {
         
         if self.demoLogin == loginText && self.demoPass == passText {
             print("Success")
+            self.performSegue(withIdentifier: "openApp", sender: nil)
         } else {
             print("Wrong login or pass")
             self.showErrorAlert()
