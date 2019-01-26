@@ -128,5 +128,10 @@ class LoginViewController: UIViewController {
         self.view.endEditing(true)
     }
     
+    // MARK: - Segue
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        print("prepare \(segue.identifier))")
+    }
     
 }

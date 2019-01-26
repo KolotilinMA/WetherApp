@@ -114,7 +114,23 @@
             </objects>
             <point key="canvasLocation" x="1079.2" y="116.37931034482759"/>
         </scene>
-        <!--Table View Controller-->
+        <!--Add City-->
+        <scene sceneID="3Ml-Ea-JDB">
+            <objects>
+                <viewController id="jTc-wV-D6d" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Ztd-Qh-CBn">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <viewLayoutGuide key="safeArea" id="JUa-6w-zP5"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="Add City" id="VZ4-7d-uFo"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="IyF-bb-kbB" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3113" y="-596"/>
+        </scene>
+        <!--Cities-->
         <scene sceneID="1rM-r0-bHU">
             <objects>
                 <tableViewController id="rM7-dh-aCR" sceneMemberID="viewController">
@@ -130,6 +146,9 @@
                                     <rect key="frame" x="0.0" y="0.0" width="375" height="43.666666666666664"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                 </tableViewCellContentView>
+                                <connections>
+                                    <segue destination="SUZ-Rc-fQ4" kind="show" id="JMS-gv-Hdn"/>
+                                </connections>
                             </tableViewCell>
                         </prototypes>
                         <connections>
@@ -137,10 +156,51 @@
                             <outlet property="delegate" destination="rM7-dh-aCR" id="M1g-4a-FmQ"/>
                         </connections>
                     </tableView>
+                    <navigationItem key="navigationItem" title="Cities" id="XrX-fs-EEo">
+                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="y83-bT-0R3">
+                            <connections>
+                                <segue destination="jTc-wV-D6d" kind="show" id="Kml-SA-N4Q"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dR6-r3-2Il" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="2106" y="116"/>
+        </scene>
+        <!--Collection View Controller-->
+        <scene sceneID="5J3-dU-jC5">
+            <objects>
+                <collectionViewController id="SUZ-Rc-fQ4" sceneMemberID="viewController">
+                    <collectionView key="view" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" id="TbJ-Qj-0MZ">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="2Rz-cE-P7X">
+                            <size key="itemSize" width="50" height="50"/>
+                            <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                            <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                            <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                        </collectionViewFlowLayout>
+                        <cells>
+                            <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="JJZ-6B-T8s">
+                                <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO">
+                                    <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                </view>
+                            </collectionViewCell>
+                        </cells>
+                        <connections>
+                            <outlet property="dataSource" destination="SUZ-Rc-fQ4" id="YnN-wU-3uN"/>
+                            <outlet property="delegate" destination="SUZ-Rc-fQ4" id="XxX-qK-nOw"/>
+                        </connections>
+                    </collectionView>
+                </collectionViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ASH-f3-Qwe" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3113" y="115"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="52z-v0-xpn">
