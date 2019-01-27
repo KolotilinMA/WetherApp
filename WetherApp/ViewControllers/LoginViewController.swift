@@ -115,8 +115,8 @@ class LoginViewController: UIViewController {
     }
     
     func showErrorAlert() {
-        let alertController = UIAlertController(title: "Error", message: "Wrong login or pass", preferredStyle: .alert)
-        let alertCancelAction = UIAlertAction(title: "Cancel", style: .cancel) { (action: UIAlertAction) in print("alertCancelAction")
+        let alertController = UIAlertController(title: "Ошибка", message: "Введены не верные данные пользователя", preferredStyle: .alert)
+        let alertCancelAction = UIAlertAction(title: "OK", style: .cancel) { (action: UIAlertAction) in print("alertCancelAction")
         }
         alertController.addAction(alertCancelAction)
         present(alertController, animated: true, completion: nil)
