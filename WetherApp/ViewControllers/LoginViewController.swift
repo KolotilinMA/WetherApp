@@ -107,15 +107,31 @@ class LoginViewController: UIViewController {
         
         if self.demoLogin == loginText && self.demoPass == passText {
             print("Success")
+            self.performSegue(withIdentifier: "openApp", sender: nil)
         } else {
-            print("loginText or passText are invalid")
+            print("Wrong login or pass")
+            self.showErrorAlert()
         }
     }
+    
+    func showErrorAlert() {
+        let alertController = UIAlertController(title: "Ошибка", message: "Введены не верные данные пользователя", preferredStyle: .alert)
+        let alertCancelAction = UIAlertAction(title: "OK", style: .cancel) { (action: UIAlertAction) in print("alertCancelAction")
+        }
+        alertController.addAction(alertCancelAction)
+        present(alertController, animated: true, completion: nil)
+    }
+    
     
     @IBAction func closeKeyboardAction(){
         print("closeKeyboardAction")
         self.view.endEditing(true)
     }
     
+    // MARK: - Segue
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        print("prepare \(segue.identifier))")
+    }
     
 }
