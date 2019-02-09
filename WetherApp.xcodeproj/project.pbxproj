@@ -14,6 +14,11 @@
 		8704E86221F8CCA20098F157 /* WetherAppTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8704E86121F8CCA20098F157 /* WetherAppTests.swift */; };
 		8704E86D21F8CCA20098F157 /* WetherAppUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8704E86C21F8CCA20098F157 /* WetherAppUITests.swift */; };
 		8704E87C21F8CD7F0098F157 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8704E87B21F8CD7F0098F157 /* LoginViewController.swift */; };
+		87C27D702205E6E400A1DCF3 /* addGroupTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87C27D6F2205E6E400A1DCF3 /* addGroupTableViewController.swift */; };
+		87C27D732205F59500A1DCF3 /* addGroupTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87C27D722205F59500A1DCF3 /* addGroupTableViewCell.swift */; };
+		87C27D762206CBE100A1DCF3 /* myGroupModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87C27D752206CBE100A1DCF3 /* myGroupModel.swift */; };
+		87C27D7A2206DE6700A1DCF3 /* GroupsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87C27D792206DE6700A1DCF3 /* GroupsTableViewController.swift */; };
+		87C9DF01220F7639002EF2EE /* GroupTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87C9DF00220F7639002EF2EE /* GroupTableViewCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -47,6 +52,11 @@
 		8704E86C21F8CCA20098F157 /* WetherAppUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WetherAppUITests.swift; sourceTree = "<group>"; };
 		8704E86E21F8CCA20098F157 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		8704E87B21F8CD7F0098F157 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
+		87C27D6F2205E6E400A1DCF3 /* addGroupTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = addGroupTableViewController.swift; sourceTree = "<group>"; };
+		87C27D722205F59500A1DCF3 /* addGroupTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = addGroupTableViewCell.swift; sourceTree = "<group>"; };
+		87C27D752206CBE100A1DCF3 /* myGroupModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = myGroupModel.swift; sourceTree = "<group>"; };
+		87C27D792206DE6700A1DCF3 /* GroupsTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GroupsTableViewController.swift; sourceTree = "<group>"; };
+		87C9DF00220F7639002EF2EE /* GroupTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GroupTableViewCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -102,6 +112,8 @@
 				8704E85321F8CCA20098F157 /* Assets.xcassets */,
 				8704E85521F8CCA20098F157 /* LaunchScreen.storyboard */,
 				8704E85821F8CCA20098F157 /* Info.plist */,
+				87C27D742206CBAC00A1DCF3 /* Models */,
+				87C27D712205F52800A1DCF3 /* Sells */,
 				8704E87A21F8CD400098F157 /* ViewControllers */,
 			);
 			path = WetherApp;
@@ -129,8 +141,27 @@
 			isa = PBXGroup;
 			children = (
 				8704E87B21F8CD7F0098F157 /* LoginViewController.swift */,
+				87C27D6F2205E6E400A1DCF3 /* addGroupTableViewController.swift */,
+				87C27D792206DE6700A1DCF3 /* GroupsTableViewController.swift */,
 			);
 			path = ViewControllers;
+			sourceTree = "<group>";
+		};
+		87C27D712205F52800A1DCF3 /* Sells */ = {
+			isa = PBXGroup;
+			children = (
+				87C27D722205F59500A1DCF3 /* addGroupTableViewCell.swift */,
+				87C9DF00220F7639002EF2EE /* GroupTableViewCell.swift */,
+			);
+			path = Sells;
+			sourceTree = "<group>";
+		};
+		87C27D742206CBAC00A1DCF3 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				87C27D752206CBE100A1DCF3 /* myGroupModel.swift */,
+			);
+			path = Models;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -264,8 +295,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				87C9DF01220F7639002EF2EE /* GroupTableViewCell.swift in Sources */,
 				8704E87C21F8CD7F0098F157 /* LoginViewController.swift in Sources */,
 				8704E84D21F8CCA20098F157 /* AppDelegate.swift in Sources */,
+				87C27D762206CBE100A1DCF3 /* myGroupModel.swift in Sources */,
+				87C27D702205E6E400A1DCF3 /* addGroupTableViewController.swift in Sources */,
+				87C27D732205F59500A1DCF3 /* addGroupTableViewCell.swift in Sources */,
+				87C27D7A2206DE6700A1DCF3 /* GroupsTableViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
