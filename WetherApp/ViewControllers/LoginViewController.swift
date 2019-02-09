@@ -11,15 +11,11 @@ import UIKit
 class LoginViewController: UIViewController {
 
     @IBOutlet private weak var scrollView: UIScrollView?
-    
     @IBOutlet private weak var titleLabel: UILabel?
-    
     @IBOutlet private weak var loginHintLabel: UILabel?
     @IBOutlet private weak var loginTextField: UITextField?
-    
     @IBOutlet private weak var passHintLabel: UILabel?
     @IBOutlet private weak var passTextField: UITextField?
-    
     @IBOutlet private weak var loginButton: UIButton?
     
     private let demoLogin = "123"
@@ -88,7 +84,11 @@ class LoginViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        self.titleLabel?.text = "Weather App"
+        self.titleLabel?.text = "VKontakte"
+        self.passTextField?.isSecureTextEntry = true
+        self.loginTextField?.text = self.demoLogin
+        self.passTextField?.text  = self.demoPass
+        
     }
     
     // MARK: - Actions
@@ -110,11 +110,11 @@ class LoginViewController: UIViewController {
             self.performSegue(withIdentifier: "openApp", sender: nil)
         } else {
             print("Wrong login or pass")
-            self.showErrorAlert()
+            self.showLoginErrorAlert()
         }
     }
     
-    func showErrorAlert() {
+    func showLoginErrorAlert() {
         let alertController = UIAlertController(title: "Ошибка", message: "Введены не верные данные пользователя", preferredStyle: .alert)
         let alertCancelAction = UIAlertAction(title: "OK", style: .cancel) { (action: UIAlertAction) in print("alertCancelAction")
         }
@@ -128,10 +128,8 @@ class LoginViewController: UIViewController {
         self.view.endEditing(true)
     }
     
-    // MARK: - Segue
-    
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        print("prepare \(segue.identifier))")
+    @IBAction func logoutAction(segue: UIStoryboardSegue?) {
+        
     }
     
 }
